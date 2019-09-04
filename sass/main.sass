@@ -1,0 +1,848 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	font-size: 10px
+	line-height: 1
+	background-color: #F5F5F5
+
+a
+	text-decoration: none
+	color: black
+
+// HEADER
+
+header
+	background-color: white
+
+.mini__header
+	background-color: #1A0E36
+
+.mini__header__wrapper
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+	padding: 0 20px
+	display: flex
+	height: 30px
+	font-size: 1.2em
+	font-family: Nunito
+	color: grey
+
+	a
+		color: grey
+		
+		&:hover
+			color: white
+
+.mini__header__menu
+	display: flex
+	align-items: center
+
+	span, a:not(:last-child)
+		margin-right: 10px
+
+
+.mini__header__media
+	flex: 1 1 auto
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+	a
+		margin-right: 10px
+
+		&:hover
+			filter: brightness(500%)
+
+		&:active
+			transform: scale(1.2)
+
+.mini__header__login
+	display: flex
+	align-items: center
+	
+	a
+		display: flex
+		align-items: center
+		margin-left: 10px
+
+		&:hover > img
+			filter: brightness(500%)
+
+		&:active
+			transform: scale(1.2)
+
+		img
+			margin-right: 5px
+
+.header
+	background-color: white
+
+.header__wrapper
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+	padding: 0 20px
+	display: flex
+
+.header__logo
+	display: flex
+	align-items: center
+	font-family: DosisEL
+	padding-bottom: 15px
+	margin-right: 50px
+
+	img
+		width: 30px
+		margin-bottom: -8px
+	
+	span
+		font-size: 5em
+
+	&:active
+		color: red
+
+.header nav
+	flex: 1 1 auto
+	display: flex
+	align-items: center
+	font-size: 1.6em
+	font-family: Nunito
+
+	& > a
+		padding: 42px 20px
+
+	a:hover
+		background-color: #1A0E36
+		color: white
+	
+	& > div
+		height: 100px
+		display: flex
+		align-items: center
+		position: relative
+
+		&:hover
+			background-color: #1A0E36
+
+			& > a
+				color: white
+
+		&:hover > a + div
+			display: block
+			z-index: 9999
+
+		& > a
+			padding: 42px 20px
+
+		& > div
+			position: absolute
+			display: none
+			top: 80px
+			left: 70px
+
+			a
+				display: block
+				background-color: #1A0E36
+				color: white
+				padding: 20px
+
+				&:hover
+					background-color: white
+					color: #1A0E36
+
+.header__search
+	display: flex
+	align-items: center
+
+	img
+		order: 1
+		margin-left: 20px
+		cursor: pointer
+
+		&:active
+			transform: scale(1.2)
+
+	input
+		width: 0
+		padding: 0
+		border: none
+	//=========================================================================JS
+
+.main-news
+	display: flex
+	min-height: 300px
+	height: 60vh
+	color: white
+
+	a
+		color: white
+
+.main-news__stylehunter, .main-news__vogue, .main-news__fashion
+	flex: 1 1 auto
+	position: relative
+
+.main-news__stylehunter
+	background: linear-gradient(#EF5350, #761293)
+
+.main-news__vogue
+	background: linear-gradient(#FFF, #EC440E)
+
+.main-news__fashion
+	background: linear-gradient(#EF5350, #0081D5)
+
+.main-news__block
+	position: absolute
+	bottom: 20px
+	left: 20px
+
+	img
+		width: 1.8em
+		margin-right: 3px
+
+.main-news__title
+	font-family: DroidSB
+	font-size: 2.7em
+	margin: 20px 0
+	
+.main-news__author
+	font-family: Nunito
+	font-size: 1.2em
+	filter: blur(1px)
+
+	&:hover
+		filter: blur(0)
+
+	&:active
+		filter: blur(0)
+		color: black
+
+.main-news__views
+	& > p:first-of-type
+		display: flex
+		align-items: center
+		font-size: 1.2em
+
+	& span
+		color: black
+		font-family: DroidSB
+
+.main-news__views-stylehunter, .main-news__views-vogue, .main-news__views-fashion
+	padding: .5em
+	border-radius: .3em
+	margin-right: 20px
+	font-family: Nunito
+
+	&:hover
+		box-shadow: 0 0 5px white
+
+	&:active
+		box-shadow: inset 0 0 5px black
+
+.main-news__views-stylehunter
+	background-color: #3B59A1
+
+.main-news__views-vogue
+	background-color: #8A3AB9
+
+.main-news__views-fashion
+	background-color: #DD4C39
+
+// MAIN
+
+.wrapper
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+
+.main
+	flex-basis: 65%
+
+aside
+	flex-basis: 33%
+
+.main-block
+	margin-top: 30px
+
+.main__header
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-end
+	margin-bottom: 30px
+
+	&::after
+		margin-top: 10px
+		content: ""
+		display: block
+		height: 3px
+		width: 100%
+
+	span
+		flex: 4 1 auto
+		font-family: DroidSB
+		font-size: 2.7em
+
+	nav
+		flex: 1 1 auto
+		font-family: Nunito
+		text-transform: uppercase
+		font-size: 1.1em
+		font-weight: bold
+		display: flex
+		justify-content: space-between
+
+.main__header-stylehunter, .main__header-celebrity
+
+	&::after
+		background: linear-gradient(to right, #7E279C, #13ADEA, #4CE45F)
+
+	span
+		color: #7E279C
+
+	nav > a:first-of-type
+		color: #4CE45F
+
+.main-block__wrapper
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.main__block
+	flex-basis: calc(50% - 15px)
+
+.main__block-big
+	flex-basis: 100%
+	margin-bottom: 30px
+
+.main__block-bg
+	display: block
+	transition: filter .5s
+
+	&:hover
+		filter: brightness(60%)
+
+.main__block-bg-big
+	min-height: 200px
+	height: 15vh
+
+.main__block-bg-stylehunter	
+	background-color: #EE9F00
+
+.main__block-content
+	background-color: white
+	padding-top: 30px
+
+	& > a
+		color: grey
+		padding: 0 30px
+
+.main__block-content_views
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+
+	img
+		width: 2.1em
+
+	a
+		color: white
+		font-family: DroidS
+		font-size: 1.2em
+		padding: 5px 5px 5px 40px
+		margin-right: 20px
+
+	span
+		font-family: DroidSB
+		font-size: 1.2em
+		margin-left: 5px
+
+.main__block-content_views-stylehunter
+	background-color: #8A3AB9
+	
+.main__block-content__title
+	font-family: DroidSB
+	font-size: 2.7em
+	line-height: 1.2
+
+.main__block-content__title-stylehunter
+	font-family: DroidSB
+	font-size: 2.7em
+	background: linear-gradient(to right, #7E279C, #13ADEA, #4CE45F)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	line-height: 1.2
+
+.main__block-content__title
+	margin-bottom: 30px
+	padding: 0 30px
+
+.main__block-content__text
+	padding: 0 30px
+	font-family: NunitoL
+	font-weight: bold
+	font-size: 1.4em
+	margin-top: 30px
+	padding-bottom: 50px
+	line-height: 1.5
+
+.main__block-bg-red
+	min-height: 150px
+	height: 8vh
+	width: 100%
+	background-color: #F44336
+
+.main__block-content_views-health
+	background-color: #14CA82
+
+.main__block-content_views-fashion
+	background-color: #DD4C39
+
+.main__header-lifestyle
+
+	&::after
+		background: linear-gradient(to right, #F44336, #CB13EC, #3E28E0)
+
+	span
+		color: #F44336
+
+	nav > a:first-of-type
+		color: #F44336
+
+.main__block-content_views-lifestyle
+	background-color: #F44336
+
+.main__block-content__title-lifestyle
+	font-family: DroidSB
+	font-size: 2.7em
+	background: linear-gradient(to right, #F44336, #CB13EC, #3E28E0)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	line-height: 1.2
+
+.main__block-small
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+
+.main__block__img
+	min-width: 70px
+	height: 70px
+	background-color: #090E1D
+	margin-right: 10px
+
+	&:hover
+		cursor: pointer
+		filter: grayscale(80%)
+
+.main__block__description > a
+	display: block
+
+.main__block__description__title
+	font-family: DroidSB
+	font-size: 1.4em
+	margin-bottom: 10px
+
+	&:active
+		color: red
+
+.main__block__celebrity-small
+	display: flex
+
+	&:not(:last-child)
+		margin-bottom: 15px
+
+	& > .main__block__img
+		min-width: 90px
+
+.main__block-celebrity
+	margin-bottom: 30px
+
+.main__block-content__celebrity
+	padding-bottom: 50px
+
+.main__header-videos
+
+	&::after
+		background: linear-gradient(to right, #203A99, #7813EC, #E028D5)
+
+	span
+		color: #203A99
+
+	nav > a:first-of-type
+		color: #203A99
+
+.main__block-content__title-videos
+	font-family: DroidSB
+	font-size: 2.7em
+	background: linear-gradient(to right, #203A99, #7813EC, #E028D5)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	line-height: 1.2
+
+.social-media
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: 40px
+	margin-bottom: 10px
+
+.social-media__block
+	flex-basis: calc(33.3% - 15px)
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 30px 0
+	margin-bottom: 20px
+
+	p
+		font-family: Nunito
+		font-size: 2em
+		color: white
+
+		&:last-of-type
+			font-size: 1.4em
+			margin-top: 10px
+
+.social-media__block-f
+	background-color: #3B59A1
+
+.social-media__block-t
+	background-color: #46B0E4
+
+.social-media__block-g
+	background-color: #DD4C39
+
+.social-media__block-y
+	background-color: #D71E17
+
+.social-media__block-i
+	background-color: #8A3AB9
+
+.social-media__block-v
+	background-color: #4C75A3
+
+.social-media__block-img
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 30px
+
+	&:hover
+		filter: saturate(50%)
+
+	&:active
+		transform: scale(1.1)
+
+.social-media__block-img-f
+	background-color: #4F6AAB
+
+.social-media__block-img-t
+	background-color: #59B8E7
+
+.social-media__block-img-g
+	background-color: #E05E4D
+
+.social-media__block-img-y
+	background-color: #DB352F
+
+.social-media__block-img-i
+	background-color: #964EC0
+
+.social-media__block-img-v
+	background-color: #5E83AC
+
+.aside__main-block
+	background-color: white
+	padding: 30px 10px 0 10px
+	margin-bottom: 30px
+
+.main-news__block-popular
+	img
+		width: 1.9em
+		margin-right: 3px
+
+.aside__popular
+	padding: 120px 50px 30px 50px
+	background: linear-gradient(#0A0F1E, #45627C, #0683D4)
+
+.aside__popular-title
+	display: block
+	margin-bottom: 30px
+	font-family: DroidSB
+	font-size: 2em
+
+	&:active
+		color: red
+
+.aside__popular__views-vogue
+	color: white
+	padding: 5px 10px
+	margin-right: 10px
+	background-color: #8A3AB9
+	font-family: DroidS
+	border-radius: .3em
+	font-size: 1.1em
+
+	&:hover
+		box-shadow: 0 0 5px white
+
+	&:active
+		box-shadow: inset 0 0 5px black
+
+.aside__popular__views__title
+	color: white
+	font-family: DroidSB
+	font-size: 2em
+	margin-bottom: 10px
+	
+.aside__popular__views > p:first-of-type
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+
+.aside__popular__views span
+	font-family: DroidSB
+	font-size: 1.1em
+
+.aside__popular__author
+	color: white
+	font-family: Nunito
+	font-size: 1.2em
+	filter: blur(1px)
+
+	&:hover
+		filter: blur(0)
+
+	&:active
+		filter: blur(0)
+		color: black
+
+.advertisement
+	background-color: #090E1D
+	height: 400px
+	width: 300px
+	margin: 0 auto
+	margin-bottom: 30px
+	color: white
+	padding: 40px
+	font-family: Amethysta
+
+.animation__font
+	animation: font .5s infinite	
+
+@keyframes font
+	from
+		color: white
+	to
+		color: red
+
+.advertisement__title
+	font-size: 4em
+	font-style: italic
+
+.advertisement-red
+	background-color: #F44336
+	margin-top: 100px
+	
+	&:hover
+		animation: red 1s alternate infinite
+
+@keyframes red
+	from
+		background-color: #F44336
+	to
+		background-color: #68B0CD
+
+.animation-translate
+	animation: translate 1s alternate infinite
+
+@keyframes translate
+	from
+		transform: translateY(-40px)
+
+.advertisement-blue
+	background-color: #68B0CD
+
+.advertisement__block1
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.advertisement__description
+	font-size: 1.4em
+	line-height: 1.5
+
+.advertisement-img
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: flex-start
+
+	p
+		margin-top: 20px
+
+//===========================footer
+
+footer
+	background-color: #090E1D
+
+.footer__wrapper
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+
+.footer__header
+	padding-top: 30px
+	display: flex
+	justify-content: space-between
+
+	nav
+		display: flex
+		align-items: flex-end
+		font-size: 1.4em
+		font-family: Nunito
+
+		& > a
+			color: #898FA4
+
+			&:not(:last-of-type)
+				margin-right: 50px
+
+.footer__lang
+	display: flex
+	align-items: flex-end
+
+	img
+		margin-right: 5px
+		margin-bottom: 5px
+
+	select
+		font-family: Nunito
+		background-color: #090E1D
+		border: none
+		color: #898FA4
+
+		&:active, &:focus, &:hover
+			outline: 0
+
+.footer__logo
+	position: relative
+	font-family: DosisEL
+
+	span
+		position: absolute
+		color: #E14C4B
+		text-transform: uppercase
+		display: block
+		font-size: .8em
+		bottom: 4.3em
+		letter-spacing: 3px
+
+	a
+		font-size: 5em
+		color: white
+
+		img
+			margin: 0 1px -2px 3px
+
+.footer__main
+	margin-top: 50px
+	margin-bottom: 20px
+	padding: 50px 0
+	border-top: 1px solid #141926
+	border-bottom: 1px solid #141926
+	display: flex
+	justify-content: space-between
+	color: #898FA4
+
+	a
+		color: #898FA4
+
+.footer__about
+	flex-basis: 25%
+	margin-right: 100px
+
+	p
+		font-size: 1.4em
+		font-family: NunitoL
+		margin-bottom: 30px
+		line-height: 1.5
+
+.footer__img-block
+	display: flex
+
+	a
+		padding: 15px
+		display: flex
+		align-items: center
+
+		&:not(:last-of-type)
+			margin-right: 10px
+
+.footer__articles
+	display: flex
+	justify-content: space-between
+	flex: 1 1 auto
+
+.footer__articles__block 
+	font-size: 1.4em
+	font-family: NunitoL
+
+	a
+		display: block
+
+		&:not(:last-of-type)
+			margin-bottom: 20px
+
+.footer-t
+	background-color: #31AAE2
+
+.footer-f
+	background-color: #0B5FA6
+
+.footer-i1
+	background-color: #E11396
+
+.footer-i
+	background-color: #313131
+
+.footer-i2
+	background-color: #F52450
+	
+.footer
+	color: #898FA4
+	font-size: 1.2em
+	font-family: OpenSans
+
+	p:first-child
+		text-align: right
+
+	p:last-of-type
+		color: white
+
+		a
+			color: #F24336
+			text-decoration: underline
+			font-family: Nunito
+			font-size: 1.2em
+
+	nav
+		padding: 20px 0
+		display: flex
+		justify-content: flex-end
+
+		a
+			color: #898FA4
+			font-family: OpenSans
+			font-size: 1em
+			
+			&:not(:last-of-type)
+				margin-right: 30px
