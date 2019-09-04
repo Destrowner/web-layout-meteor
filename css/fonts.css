@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NunitoL";
+  src: url("../fonts/nunito/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DosisEL";
+  src: url("../fonts/dosis/Dosis-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DroidS";
+  src: url("../fonts/droidserif/DroidSerif-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DroidSB";
+  src: url("../fonts/droidserif/DroidSerif-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amethysta";
+  src: url("../fonts/amethysta/Amethysta-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensans/OpenSans-Regular.ttf") format("truetype");
+}
+/*# sourceMappingURL=fonts.css.map */
